@@ -1,2 +1,3 @@
-This file can include information on how users can support you (Ko-Fi or Patreon for example).
-You can also delete this file if you don't need it.
+# Support
+
+For technical issues, bug reports, or feature requests regarding this mechanics pack, please open an issue in the official GitHub repository.
