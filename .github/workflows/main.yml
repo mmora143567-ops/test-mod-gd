@@ -15,8 +15,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Geode CLI
+        uses: geode-sdk/cli/.github/actions/setup@main
+
       - name: Build Mod for iOS
-        uses: geode-sdk/build-geode-mod@main
-        with:
-          bindings: geode-sdk/bindings
-          target: iOS
+        run: |
+          geode profile add --platform ios GithubActions
+          geode sdk install-binaries
+          geode mod build --platform ios
