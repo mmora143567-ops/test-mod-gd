@@ -1,23 +1,15 @@
-# Template
-This is where she makes a mod.
+# 6 Orbs & 3 Triggers Pack
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+An advanced custom gameplay mechanics package built for Geometry Dash using the Geode framework. 
 
-*Update logo.png to change your mod's icon (please)*
+## Features
 
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
+* **Dynamic Rewind Orb:** Allows precision time reversal. Features a customizable 1-20 second buffer configurable directly via the editor's 'Edit Object' panel slider.
+* **5 Physics Alteration Orbs:** Injects novel behavior hooks for live gameplay including scale deforming, temporary hovering, and gravity manipulation.
+* **Environment Logic Triggers:** Includes automated gamemode toggles and custom countdown sudden death state managers restricted specifically to platformer physics layers.
 
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
-```sh
-# Assuming you have the Geode CLI set up already
-geode build
-```
+## Technical Details
 
-# Resources
-* [Geode SDK Documentation](https://docs.geode-sdk.org/)
-* [Geode SDK Source Code](https://github.com/geode-sdk/geode/)
-* [Geode CLI](https://github.com/geode-sdk/cli)
-* [Bindings](https://github.com/geode-sdk/bindings/)
-* [Dev Tools](https://github.com/geode-sdk/DevTools)
+* **Framework:** Geode v3.0.0
+* **Language:** C++20
+* **Target Platforms:** Android / iOS / Windows
