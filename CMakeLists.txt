@@ -1,13 +1,10 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.13)
 
-project(ultimate-mechanics)
+project(ultimate_mechanics)
 
 find_package(geode REQUIRED)
 
 add_geode_mod(
-    ultimate-mechanics
-    VERSION v1.0.0
-    
-    SOURCES
-        src/main.cpp
+    ID mmora143.ultimate_mechanics
+    SOURCES main.cpp
 )
