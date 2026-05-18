@@ -1,4 +1,4 @@
-name: Build Geode Mod (iOS)
+name: Build Geode Mod
 
 on:
   push:
@@ -8,18 +8,21 @@ on:
 
 jobs:
   build:
-    name: iOS Build
-    runs-on: macos-14
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - name: Windows
+            os: windows-2022
+
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
 
     steps:
-      - name: Checkout Code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Geode CLI
-        uses: geode-sdk/cli/.github/actions/setup@main
-
-      - name: Build Mod for iOS
-        run: |
-          geode profile add --platform ios GithubActions
-          geode sdk install-binaries
-          geode mod build --platform ios
+      - name: Build Mod
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          bindings: geode-sdk/bindings
